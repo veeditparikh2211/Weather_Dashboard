@@ -16,6 +16,7 @@ function Delete() {
     localStorage.clear();
 }
 
+// showing the list of the cities searched
 function weather(event) {
     event.preventDefault();
 
@@ -47,6 +48,7 @@ function weather(event) {
     }
 }
 
+// showing the current weather using the open weather api.
 function currentWeather(city) {
 
     const apiKey = "946e55c4d55b3abaa90dbcc53301c4f1";
@@ -93,6 +95,8 @@ function currentWeather(city) {
                 uvIndex.setAttribute("class", "badge bg-danger");
             }
         });
+
+        // weather forecast for next 5 days
         $.ajax({
             url: "https://api.openweathermap.org/data/2.5/onecall?units=imperial&" + "lat=" + latValue + "&lon=" + lonValue + "&exclude=current,minutely,hourly,alerts" + "&appid=" + apiKey,
             method: "GET",
@@ -131,8 +135,6 @@ function currentWeather(city) {
                 var ptag3 = document.createElement("p");
                 div2.appendChild(ptag3);
                 ptag3.textContent = "Humidity:" + forecastHumidity + "%";
-
-
 
             }
         })

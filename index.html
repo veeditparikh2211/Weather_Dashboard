@@ -26,6 +26,8 @@
                         <button class=" btn bg-primary text-light" id="city-name"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
+
+                <!-- showing the list of cities searched -->
                 <div class="card">
                     <div class="card-body">
                         <ul class="list-group-flush" id="list">
@@ -35,6 +37,8 @@
                 </div>
                 <button onclick="Delete()" class="btn btn-primary mt-3" type="button" id="clearlist">Clear</button>
             </div>
+
+            <!-- showing current city with different weather conditions. -->
             <div class="col-sm-10 mt-3">
                 <div class="row-sm-10 mx-2 border border-dark rounded">
                     <div class="col-sm-10 mx-2" id="weather">
@@ -45,12 +49,12 @@
                         <p class="current" id="uv-index"></p>
                     </div>
                 </div>
+
+                <!-- Weatherforecast for next 5 days  -->
                 <div class="row row-cols-1 row-cols-sm-10 g-4 m-2" id="weatherforecast">
                 </div>
-
             </div>
         </div>
-        <br>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
